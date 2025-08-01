@@ -45,7 +45,7 @@ export default function UserInformation() {
   });
   const onSubmit = (values: UserInfoFormValues) => {
     console.log(values)
-    setFormState(form.formState.isValid);
+    setFormState(true);
     toast.success("address details added");
   };
 

@@ -37,7 +37,6 @@ export const OrderSummaryCard: React.FC<OrderSummaryCardProps> = ({
     }
 
     if (!formState) {
-
       toast.error("Please fill all the Address details");
       return;
     }

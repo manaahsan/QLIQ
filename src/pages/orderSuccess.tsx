@@ -1,9 +1,11 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "@/context/AppContext";
 
 export default function OrderSuccess() {
-    const navigate = useNavigate();
+  const {setCart} = useAppContext();
+  const navigate = useNavigate();
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-8 text-center">
@@ -24,7 +26,10 @@ export default function OrderSuccess() {
         <div className="flex flex-col sm:flex-row gap-3">
           <Button
             className="w-full bg-[#0082FF3D] text-primary hover:bg-[#0082FF3D]"
-            onClick={() => navigate("/") }
+            onClick={() => {
+              setCart([]);
+              navigate("/");
+            }}
           >
             Continue Shopping
           </Button>

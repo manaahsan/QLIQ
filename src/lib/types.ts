@@ -26,6 +26,7 @@ export interface AppContextValue {
   isLoading: boolean;
   setIsLoading: (v: boolean) => void;
   cart: CartItem[];
+  setCart: React.Dispatch<React.SetStateAction<CartItem[]>>;
   addToCart: (item: CartItem) => void;
   selectedColor: string;
   setSelectedColor: (color: string) => void;
